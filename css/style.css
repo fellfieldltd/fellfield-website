@@ -238,11 +238,19 @@ blockquote{
 
     top:0;
 
+    left:0;
+
     width:100%;
 
     z-index:1000;
 
-    transition:.4s;
+    transition:
+
+        background .35s ease,
+
+        backdrop-filter .35s ease,
+
+        color .35s ease;
 
 }
 
@@ -253,6 +261,24 @@ blockquote{
     backdrop-filter:blur(20px);
 
     border-bottom:1px solid rgba(0,0,0,.04);
+
+}
+
+.site-header.scrolled .logo{
+
+    color:var(--charcoal);
+
+}
+
+.site-header.scrolled .nav-links a{
+
+    color:var(--charcoal);
+
+}
+
+.site-header.scrolled .nav-links a::after{
+
+    background:var(--charcoal);
 
 }
 
@@ -280,6 +306,10 @@ blockquote{
 
     font-weight:600;
 
+    color:white;
+
+    transition:color .35s ease;
+
 }
 
 .nav-links{
@@ -294,9 +324,15 @@ blockquote{
 
     font-size:.88rem;
 
-    transition:var(--transition);
-
     position:relative;
+
+    color:white;
+
+    transition:
+
+        color .35s ease,
+
+        opacity .35s ease;
 
 }
 
@@ -314,7 +350,7 @@ blockquote{
 
     height:1px;
 
-    background:var(--charcoal);
+    background:white;
 
     transition:.3s;
 
@@ -378,18 +414,13 @@ blockquote{
     inset:0;
 
     background:
-
-    linear-gradient(
-
-    to top,
-
-    rgba(0,0,0,.45),
-
-    rgba(0,0,0,.15),
-
-    rgba(0,0,0,.05)
-
-    );
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.35) 0%,
+            rgba(0,0,0,.18) 18%,
+            rgba(0,0,0,.12) 45%,
+            rgba(0,0,0,.42) 100%
+        );
 
 }
 
@@ -405,6 +436,8 @@ blockquote{
     width:min(90%,1320px);
 
     margin:0 auto 8rem;
+
+    padding-top:9rem;
 
 }
 
