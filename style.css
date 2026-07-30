@@ -1294,7 +1294,9 @@ body{
 
 }
 
-
+.nav-links a.active::after{
+    width:100%;
+}
 
 /* ==========================================================
    END OF STYLESHEET
